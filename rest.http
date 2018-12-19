@@ -1,0 +1,18 @@
+POST http://localhost:8080/api/accounts
+
+###
+GET http://localhost:8080/api/accounts/1
+
+###
+POST http://localhost:8080/api/dispositions
+Content-Type:application/json
+
+{
+"accountNumber":"00000000000000000000000001",
+"funds": 5000,
+"operationName":"deposit"
+
+}
+
+
+###

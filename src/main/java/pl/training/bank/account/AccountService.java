@@ -26,6 +26,9 @@ public class AccountService {
         return accountRepository.getByNumber(accountNumber)
                 .orElseThrow(AccountNotFoundException::new);
     }
+    public Account getById(Long id){
+        return accountRepository.getById(id);
+    }
 
     public ResultPage<Account> get(int pageNumber, int pageSize) {
         Page<Account> accountsPage = accountRepository.findAll(PageRequest.of(pageNumber, pageSize));
